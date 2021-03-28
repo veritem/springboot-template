@@ -38,3 +38,4 @@ Open the Broswer an navigate to `http://localhost:8080/swagger-ui.html`
 - maven package manager
 - Java 11
 - Packaging with `jar`
+- Containized using Docker

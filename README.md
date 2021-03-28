@@ -5,8 +5,10 @@ Start Template for my spring projects
 
 ### Features
 
-1. Authentication
-2. Swagger documentation
+1. Authentication with jwt
+2. Role based Authorization
+3. Postgres Database Setup
+4. Swagger documentation
 
 
 

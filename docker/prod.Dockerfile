@@ -1,6 +1,4 @@
-FROM openjdk:7
-COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp
-RUN javac Application.jar
-
-CMD ["java","Application.jar"]
+FROM openjdk:11
+ADD target/template.jar template.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","template.jar"]

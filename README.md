@@ -13,6 +13,6 @@ Start Template for my spring projects
 ### Toolkit
 
 - Spring 2.4.4
-- mven package manager
+- maven package manager
 - Java 11
 - Packaging `jar`

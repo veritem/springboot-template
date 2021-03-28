@@ -1,0 +1,5 @@
+spring:
+  message: spring starting
+
+server:
+  port: 8080

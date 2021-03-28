@@ -18,6 +18,7 @@ public class CatService {
         return this.catRepository.findAll();
     }
 
+
     public void addCat(Cat cat){
         catRepository.save(cat);
     }

@@ -5,4 +5,5 @@ Start Template for my spring projects
 
 ### Features
 
-1. 
+1. Authentication
+2. Swagger documentation

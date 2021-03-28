@@ -8,7 +8,7 @@ Start Template for my spring projects
 1. Authentication with jwt
 2. Role based Authorization
 3. Postgres Database Setup
-4. Swagger documentation
+4. Swagger api documentation
 
 
 

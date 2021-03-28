@@ -17,4 +17,4 @@ Start Template for my spring projects
 - Spring 2.4.4
 - maven package manager
 - Java 11
-- Packaging `jar`
+- Packaging with `jar`

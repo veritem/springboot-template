@@ -33,7 +33,5 @@ public class Cat {
         this.breed = breed;
         this.isVaccinated = isVaccinated;
     }
-
-
 }
 

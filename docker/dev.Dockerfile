@@ -1,5 +1,5 @@
 # Create builder stage for build application.
-FROM maven:3-openjdk-8 as builder
+FROM maven:3-openjdk-11 as builder
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ RUN mvn clean package
 RUN mv target/*.jar app.jar
 
 # Reduce image size
-FROM openjdk:8-jdk-alpine
+FROM openjdk:11-jdk-alpine
 
 WORKDIR /app
 

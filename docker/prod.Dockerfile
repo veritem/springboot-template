@@ -1,4 +1,5 @@
 FROM openjdk:11
-ADD target/template.jar template.jar
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} cloud-gateway.jar
+ENTRYPOINT ["java","-jar","/cloud-gateway.jar"]
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","template.jar"]

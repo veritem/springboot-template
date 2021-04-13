@@ -1,5 +1,6 @@
 package com.example.template.config;
 
+/*
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.PathSelectors;
@@ -14,7 +15,9 @@ import java.util.*;
 
 @Configuration
 @EnableSwagger2
+ */
 public class SwaggerApiDoc {
+   /*
     private static final Set<String> DEFAULT_PRODUCES_AND_CONSUMES = new HashSet<String>(
             Arrays.asList("application/json"));
 
@@ -61,4 +64,6 @@ public class SwaggerApiDoc {
                 Collections.emptyList()
         );
     }
+
+    */
 }

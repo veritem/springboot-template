@@ -1,4 +1,4 @@
-package com.example.template.authentication;
+package com.example.template.controllers;
 
 import com.example.template.models.LoginResponse;
 import com.example.template.util.JwtUtil;

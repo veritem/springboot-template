@@ -1,4 +1,4 @@
-package com.example.template.models;
+package com.example.template.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

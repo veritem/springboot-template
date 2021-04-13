@@ -1,8 +1,8 @@
 package com.example.template.controllers;
 
-import com.example.template.models.LoginResponse;
+import com.example.template.dtos.LoginResponse;
 import com.example.template.util.JwtUtil;
-import com.example.template.models.LoginRequest;
+import com.example.template.dtos.LoginRequest;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

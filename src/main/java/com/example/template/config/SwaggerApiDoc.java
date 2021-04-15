@@ -29,7 +29,7 @@ public class SwaggerApiDoc {
                 .securityContexts(Arrays.asList(securityContext()))
                 .securitySchemes(Arrays.asList(apiKey()))
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("rw.gov.primature.tms.controller"))
+                .apis(RequestHandlerSelectors.basePackage("rw.gov.primature.tms.controllers"))
                 .paths(PathSelectors.any())
                 .build();
     }

@@ -7,7 +7,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/api/auth")
+@RequestMapping(path = "/api/v1/auth")
 @NoArgsConstructor
 public class AuthenticationController {
 
@@ -17,8 +17,6 @@ public class AuthenticationController {
 
     @Autowired
     private JwtUtil jwtUtil;
-
-
 
     @PostMapping(path="register")
     public String register(){
@@ -30,9 +28,8 @@ public class AuthenticationController {
         return "Confirm";
     }
 
-    @GetMapping(path = "current-user")
+    @GetMapping(path = "current_user")
     public String getCurrentlyLoggedInUser(){
         return "foo";
     }
-
 }

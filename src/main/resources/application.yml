@@ -2,15 +2,18 @@ server:
   error:
     include-message: always
     include-binding-errors: always
+  port: 8000
+  servlet:
+    register-default-servlet: on
 
 spring:
   datasource:
     password: code
     url: jdbc:postgresql://localhost:5432/template
-    username: veritem
+    username: postgres
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -19,3 +22,4 @@ spring:
 jwt:
   secret: mak*(!NSKJ@(*21
   expiresIn: 86400000
+

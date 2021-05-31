@@ -1,5 +1,7 @@
-package com.example.template.cat;
+package com.example.template.services;
 
+import com.example.template.models.Cat;
+import com.example.template.repository.CatRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +19,6 @@ public class CatService {
     public List<Cat> getAllCats(){
         return this.catRepository.findAll();
     }
-
 
     public void addCat(Cat cat){
         catRepository.save(cat);

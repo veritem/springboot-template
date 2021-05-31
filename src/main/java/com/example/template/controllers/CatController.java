@@ -1,9 +1,10 @@
-package com.example.template.cat;
+package com.example.template.controllers;
 
 
+import com.example.template.models.Cat;
+import com.example.template.services.CatService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import io.swagger.annotations.Contact;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

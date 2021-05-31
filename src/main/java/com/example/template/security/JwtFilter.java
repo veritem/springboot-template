@@ -1,4 +1,4 @@
-package com.example.template.filters;
+package com.example.template.security;
 
 import com.example.template.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;

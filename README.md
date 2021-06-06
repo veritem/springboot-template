@@ -1,6 +1,12 @@
-## Production Ready springboot project template
-Start Template for my spring projects
+## Spring boot project template
 
+
+unopinionated spring bootproject template that every body agrees on
+
+
+### Motivation
+
+There a lot of tools that can help you get start with a spring boot poject like spring initializer and many other, i created this project to reduce the manual tasks i know run into when starting a new project from scratch like setup authentication, documentation and many others.
 
 
 ### Getting started

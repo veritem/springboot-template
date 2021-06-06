@@ -20,7 +20,7 @@ Requirements
 clone the repo
 
 ```bash
-git clone https://github.com/makuzaverite/springboot-project-template.git
+git clone https://github.com/veritem/springboot-project-template.git
 ```
 
 Open in you favorite Java IDE (IntelliJ or eclipse)

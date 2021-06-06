@@ -1,4 +1,7 @@
-version: "3.1"
+# TO run the app do
+# docker-compose -f docker-compose-dev.yml up --build
+
+  version: "3.1"
 
 services:
   database:
@@ -6,8 +9,8 @@ services:
       context: ./database
     image: atsea_db
     environment:
-      POSTGRES_USER: gordonuser
-      POSTGRES_DB: atsea
+      POSTGRES_USER: template_user
+      POSTGRES_DB: template_app
     ports:
       - "5432:5432"
     networks:

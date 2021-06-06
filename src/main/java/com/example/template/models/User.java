@@ -1,5 +1,7 @@
 package com.example.template.models;
 
+import com.example.template.enums.EGender;
+import com.example.template.enums.EStatus;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,6 +27,11 @@ public class User {
     private String firstName;
     private String lastName;
     private String mobile;
+    @Enumerated(EnumType.STRING)
+    private EGender gender;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
+    private EStatus status = EStatus.ACTIVE;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_roles",joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
@@ -33,4 +40,14 @@ public class User {
 
     @JsonIgnore
     private String password;
+
+
+    public User(String email, String firstName, String lastName, String mobile, EGender gender, String password) {
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.mobile = mobile;
+        this.gender = gender;
+        this.password = password;
+    }
 }

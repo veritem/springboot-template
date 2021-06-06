@@ -22,10 +22,8 @@ public class Role {
     @Enumerated(EnumType.STRING)
     private ERoleType name;
 
-    private String description;
 
-    public Role(ERoleType name, String description) {
+    public Role(ERoleType name) {
         this.name = name;
-        this.description = description;
     }
 }

@@ -1,6 +1,7 @@
 package com.example.template.models;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
@@ -12,14 +13,14 @@ import java.util.UUID;
 @Getter
 @Setter
 @Entity(name = "cat")
+@NoArgsConstructor
 public class Cat {
 private String name;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Id
-    public UUID getId() {
-        return id;
+    public Cat(String name) {
+        this.name = name;
     }
 }

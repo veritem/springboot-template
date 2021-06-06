@@ -1,7 +1,7 @@
 ## Spring boot project template
 
 
-Unopinoned spring bootproject template that every body agrees on
+unopinionated spring bootproject template that every body agrees on
 
 
 ### Motivation

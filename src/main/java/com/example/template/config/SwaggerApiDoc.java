@@ -53,7 +53,7 @@ public class SwaggerApiDoc {
 
     private ApiInfo appInfo() {
         return new ApiInfo(
-                "Sbt",
+                "sbt",
                 "Spring boot starter kit",
                 "1.0.0",
                 "https://github.com/veritem/springboot-template/blob/main/README.md",

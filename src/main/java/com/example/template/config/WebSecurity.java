@@ -3,7 +3,6 @@ package com.example.template.config;
 import com.example.template.security.CustomUserDetailsService;
 import com.example.template.security.JwtAuthenticationEntryPoint;
 import com.example.template.security.JwtAuthenticationFilter;
-import io.swagger.models.HttpMethod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,7 +19,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(securedEnabled = true, jsr250Enabled = true, prePostEnabled = true)
-public class WebSecurity extends WebSecurityConfigurerAdapter  {
+public class WebSecurity extends WebSecurityConfigurerAdapter {
+
     @Autowired
     CustomUserDetailsService userService;
 
@@ -44,7 +44,6 @@ public class WebSecurity extends WebSecurityConfigurerAdapter  {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userService).passwordEncoder(passwordEncoder());
     }
-
 
     @Bean()
     @Override
@@ -72,8 +71,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter  {
                         "/**/*.gif",
                         "/**/*.svg", "/**/*.jpg", "/**/*.html",
                         "/**/*.css", "/**/*.js").permitAll()
-                .antMatchers(
-                        "/api/v1/auth/**", "/api/v1/documents/load-file/**","/api/v1/appointee/load-file/**","/api/v1/users/load-file/**").permitAll()
+                .antMatchers("/api/v1/auth/**", "/api/v1/clusters/**", "/api/v1/institutions/**", "/api/v1/documents/**").permitAll()
                 .antMatchers( "/v2/api-docs",
                         "/configuration/ui",
                         "/swagger-resources/**",

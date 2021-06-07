@@ -14,7 +14,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import java.util.*;
 
 @Configuration
-@EnableSwagger2
 public class SwaggerApiDoc {
 
     private static final Set<String> DEFAULT_PRODUCES_AND_CONSUMES = new HashSet<String>(

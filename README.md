@@ -3,6 +3,7 @@
 
 unopinionated spring bootproject template that every body agrees on
 
+tl;dr check this first https://sbt-template.herokuapp.com/
 
 ### Motivation
 
@@ -35,13 +36,13 @@ Open the Broswer an navigate to `http://localhost:8080/swagger-ui.html`
 2. Role based Authorization
 3. Postgres Database Setup
 4. Swagger api documentation
-
+5. Smart Exception handling
 
 
 ### Toolkit
 
 - Spring 2.4.4
 - maven package manager
-- Java 11
+- Java 11 or higher
 - Packaging with `jar`
 - Containized using Docker

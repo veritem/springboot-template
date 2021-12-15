@@ -1,22 +1,17 @@
 ## Spring boot project template
 
 
-unopinionated spring bootproject template that every body agrees on
+opinionated springboot  template that every body agrees on
 
-tl;dr check this first https://sbt-template.herokuapp.com/
 
 ### Motivation
 
-There a lot of tools that can help you get start with a spring boot poject like spring initializer and many others, i created this project to reduce the manual tasks i know run into when starting a new project from scratch like setup authentication, documentation and many more.
+There a lot of tools that can help you get start with a spring boot project like spring initializer and many others, i created this project to reduce the manual tasks i know run into when starting a new project from scratch like setup authentication, documentation and many more.
 
 
 ### Getting started
 
-
-Requirements
-
-- postgres installed locally
-- Java 11 or higher installed
+> Make sure you have java installed on your system.
 
 clone the repo
 
@@ -24,11 +19,20 @@ clone the repo
 git clone https://github.com/veritem/springboot-project-template.git
 ```
 
+Run `docker-compose up` to start a postgres container
+
+Run `docker exec -it <container_name> bash` to enter the container
+
+```bash
+psql -U postgres
+create database sptest;
+```
+
 Open in you favorite Java IDE (IntelliJ or eclipse)
 
 Start button
 
-Open the Broswer an navigate to `http://localhost:8080/swagger-ui.html`
+Open the Browser and navigate to `http://localhost:8000/swagger-ui/index.html#/`
 
 ### Features
 
@@ -45,4 +49,4 @@ Open the Broswer an navigate to `http://localhost:8080/swagger-ui.html`
 - maven package manager
 - Java 11 or higher
 - Packaging with `jar`
-- Containized using Docker
+- Containerized with Docker

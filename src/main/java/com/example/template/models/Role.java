@@ -26,4 +26,7 @@ public class Role {
     public Role(ERoleType name) {
         this.name = name;
     }
+
+    public Role(String admin) {
+    }
 }

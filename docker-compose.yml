@@ -1,43 +1,21 @@
-# TO run the app do
-# docker-compose -f docker-compose-dev.yml up --build
+version: '3.7'
 
-  version: "3.1"
+# after docker-compose up
+# docker exec -it <container_name> bash
+# psql -U postgres
+# create database <db_name>;
 
 services:
   database:
-    build:
-      context: ./database
-    image: atsea_db
+    image: postgres:14 # PostgreSQL image
+    ports:
+      - "5432:5432" # Port 5432 to port 5432
     environment:
-      POSTGRES_USER: template_user
-      POSTGRES_DB: template_app
-    ports:
-      - "5432:5432"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    restart: always # Restart the container if it exits
     networks:
-      - back-tier
-    secrets:
-      - postgres_password
-
-  appserver:
-    build:
-      context: .
-      dockerfile: docker/dev.Dockerfile
-    image: atsea_app
-    ports:
-      - "8080:8080"
-      - "5005:5005"
-    networks:
-      - front-tier
-      - back-tier
-    secrets:
-      - postgres_password
-
-secrets:
-  postgres_password:
-    file: ./devsecrets/postgres_password
-
-networks:
-  front-tier:
-  back-tier:
-  payment:
-    driver: overlay
+      - default # Connect to the default network

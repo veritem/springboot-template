@@ -8,14 +8,14 @@ server:
 
 spring:
   profiles:
-    active: dev
+    active: prod
   datasource:
-    password: postgres
-    url: jdbc:postgresql://localhost:5432/sptest
-    username: postgres
+    password: bad0eac65e17cf16af3672ee44611b5a14104d66a25aa0f3c98c80513276657b
+    url: jdbc:postgresql://ec2-54-225-228-142.compute-1.amazonaws.com:5432/db34lpcd15lk1o
+    username: ucnfsfrhkrfxjy
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
       generate-ddl: true
     properties:
       hibernate:
@@ -25,4 +25,3 @@ spring:
 jwt:
   secret: mak*(!NSKJ@(*21
   expiresIn: 86400000
-

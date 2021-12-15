@@ -14,15 +14,13 @@ import org.springframework.stereotype.Component;
 
 @SpringBootApplication
 public class TemplateApplication {
-
-
-
 	public static void main(String[] args) {
 		SpringApplication.run(TemplateApplication.class, args);
 	}
 }
 
 
+/*
 @Component
 class AppReady implements ApplicationRunner {
 	@Autowired
@@ -39,3 +37,4 @@ class AppReady implements ApplicationRunner {
 		roleRepository.save(new Role(ERoleType.USER));
 	}
 }
+*/

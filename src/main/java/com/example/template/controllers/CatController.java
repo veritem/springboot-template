@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,9 +27,8 @@ public class CatController {
 
   @GetMapping
   @ApiOperation(value = "Get all cats",notes = "Get all cats' information",response = Cat.class)
-  public Page<Cat> getAllCats(@RequestParam(value = "page", defaultValue = Constants.DEFAULT_PAGE_NUMBER) int page,
-                              @RequestParam(value = "size", defaultValue = Constants.DEFAULT_PAGE_SIZE) int size){
-      return this.catService.getAllCats(page, size);
+  public List<Cat> getAllCats(){
+      return this.catService.getAllCats();
   }
 
   @GetMapping("/{id}")
@@ -42,4 +42,10 @@ public class CatController {
   public Cat addCat(@RequestBody CatDTO cat){
    return catService.addCat(cat);
   }
+
+  @DeleteMapping("/{id}")
+  @ApiOperation(value = "Delete cat",notes = "Delete cat by id")
+  public ResponseEntity<?> deleteCat(@PathVariable UUID id){
+        return catService.deleteCat(id);
+    }
 }

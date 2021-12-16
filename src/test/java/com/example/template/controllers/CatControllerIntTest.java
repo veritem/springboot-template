@@ -34,14 +34,26 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@WebMvcTest(CatController.class)
 class CatControllerIntTest {
+
+
+    @Autowired
+    private WebApplicationContext webApplicationContext;
 
     @MockBean
     private CatService catServiceMock;
 
 
+    @Autowired
     private MockMvc mockMvc;
+
+    @Before
+    public void setup() {
+        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext)
+                .apply(springSecurity())
+                .build();
+    }
 
 
     @Test

@@ -11,7 +11,7 @@ spring:
     active: dev
   datasource:
     password: postgres
-    url: jdbc:postgresql://localhost:5432/sptest
+    url: jdbc:postgresql://localhost:5432/db
     username: postgres
   jpa:
     hibernate:

@@ -1,45 +1,46 @@
 ## Spring boot project template
 
 
-opinionated springboot  template that every body agrees on
+This is another opinionated springboot template. 
 
 
 ### Motivation
 
-There a lot of tools that can help you get start with a spring boot project like spring initializer and many others, i created this project to reduce the manual tasks i know run into when starting a new project from scratch like setup authentication, documentation and many more.
+TLDR: I was tired of repeating the same manual tasks every time I started a new spring project. 
 
+Many tools can help generate a new spring boot project from scratch, like Spring Initializer and many others. But Why does this template exist? Well, Springboot is a weird framework with a lot of boilerplate. 
 
 ### Getting started
 
-> Make sure you have java installed on your system.
+> Make sure you have Java installed on your system.
 
-clone the repo
+1. clone the repo
 
 ```bash
 git clone https://github.com/veritem/springboot-project-template.git
 ```
 
-Run `docker-compose up` to start a postgres container
+2. run `docker-compose up` to start a Postgres container
 
-Run `docker exec -it <container_name> bash` to enter the container
+3. run  `docker exec -it <container_name> bash` to enter the container
 
 ```bash
 psql -U postgres
-create database sptest;
+create database <your-database-name>;
 ```
 
-Open in you favorite Java IDE (IntelliJ or eclipse)
+4. Open in you favorite Java IDE (IntelliJ or eclipse)
 
-Start button
 
-Open the Browser and navigate to `http://localhost:8000/swagger-ui/index.html#/`
+5. Open the Browser and navigate to `http://localhost:8000/swagger-ui/index.html#/`
+
 
 ### Features
 
-1. Authentication with jwt
-2. Role based Authorization
+1. Authentication with JWT
+2. Role-based Authorization
 3. Postgres Database Setup
-4. Swagger api documentation
+4. Swagger API documentation
 5. Smart Exception handling
 
 
@@ -50,3 +51,5 @@ Open the Browser and navigate to `http://localhost:8000/swagger-ui/index.html#/`
 - Java 11 or higher
 - Packaging with `jar`
 - Containerized with Docker
+
+If you run into any issues, feel free to open a new issue. Have a good rest of your day!
